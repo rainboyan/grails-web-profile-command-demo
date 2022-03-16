@@ -1,11 +1,21 @@
 # Grails Plugin Demo
 
-Grails profile demo, use `org.grails.internal.grails-plugin-publish` to publish it.
+Grails profile demo, use `org.grails.internal.grails-plugin-publish` to publish it. When upgrade to Grails 5.1.2, build profile fail. This demo project reproduce the errors.
+
+```
+* What went wrong:
+Execution failed for task ':compileProfile'.
+> Receiver class org.grails.cli.profile.commands.script.GroovyScriptCommandTransform does not define or inherit an implementation of the resolved method 'abstract java.lang.Object getProperty(java.lang.String)' of interface groovy.lang.GroovyObject.
+
+```
+
+Update changes [4.0.x...master](https://github.com/rainboyan/grails-web-profile-command-demo/compare/4.0.x...master)
 
 ## Grails Version
 
 - Grails **4.0.13**
 - Grails **5.1.2**
+- Java openjdk version "11.0.14" 2022-01-18 LTS
 
 ## Usage
 
