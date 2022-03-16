@@ -4,7 +4,7 @@ buildscript {
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
-        classpath "org.grails:grails-gradle-plugin:${project.grailsVersion}"
+        classpath "org.grails:grails-gradle-plugin:${project.grailsGradlePluginVersion}"
     }
 }
 
@@ -14,24 +14,20 @@ apply plugin: "org.grails.internal.grails-profile-publish"
 group 'org.grails.profiles'
 version '1.0.0-SNAPSHOT'
 
-grailsPublish {
-    // TODO: Provide values here
-    user = 'user'
-    key = 'key'
-    githubSlug = 'foo/bar'
-    license {
-        name = 'Apache-2.0'
-    }
-    title = "My Profile"
-    desc = "Full profile description"
-    developers = [johndoe:"John Doe"]
-}
-
 repositories {
     mavenLocal()
     maven { url "https://repo.grails.org/grails/core" }
 }  
 
 dependencies {
-    runtime "org.grails.profiles:base:$baseProfileVersion"
+    profileRuntimeOnly "org.grails.profiles:base:$baseProfileVersion"
+}
+
+grailsPublish {
+	userOrg = 'rainboyan'  
+	githubSlug = 'rainboyan/web-profile-command-demo'
+	license = 'Apache-2.0'
+	title = "Grails Web Demo Profile"
+	desc = "A profile for Web Demo applications"
+	developers = [rainboyan:'Michael Yan']
 }
