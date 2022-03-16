@@ -1,4 +1,4 @@
-# Grails Plugin Demo
+# Grails Profile Demo
 
 Grails profile demo, use `org.grails.internal.grails-plugin-publish` to publish it. When upgrade to Grails 5.1.2, build profile fail. This demo project reproduce the errors.
 
