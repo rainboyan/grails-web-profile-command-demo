@@ -4,10 +4,11 @@ buildscript {
         maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
-        classpath "org.grails:grails-gradle-plugin:${project.grailsVersion}"
+        classpath "org.grails:grails-gradle-plugin:$grailsVersion"
     }
 }
 
+apply plugin: "groovy"
 apply plugin: "org.grails.grails-profile"
 apply plugin: "org.grails.internal.grails-profile-publish"
 
@@ -34,4 +35,5 @@ repositories {
 
 dependencies {
     runtime "org.grails.profiles:base:$baseProfileVersion"
+    compile "org.codehaus.groovy:groovy-all:2.5.14"
 }
