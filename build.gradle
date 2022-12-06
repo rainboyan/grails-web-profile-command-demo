@@ -9,6 +9,7 @@ buildscript {
     }
 }
 
+apply plugin: "groovy"
 apply plugin: "org.grails.grails-profile"
 apply plugin: "org.grails.internal.grails-profile-publish"
 
@@ -21,6 +22,7 @@ repositories {
 }  
 
 dependencies {
+    compileOnly "org.codehaus.groovy:groovy:3.0.12"
     profileRuntimeOnly "org.grails.profiles:base:$baseProfileVersion"
 }
 
